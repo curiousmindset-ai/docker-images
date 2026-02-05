@@ -2,10 +2,9 @@ name: hadolint
 
 on:
   pull_request:
-    branches: ["main", "develop"]
   
   push:
-    branches: ["main", "develop"]
+    branches: ["develop"]
     paths:
       
 jobs:

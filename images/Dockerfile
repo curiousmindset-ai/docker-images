@@ -51,5 +51,5 @@ HEALTHCHECK --interval=10s --timeout=3s --start-period=10s --retries=3 \
 # Drop privileges
 USER appuser
 
-# Run the app
+# Run app
 CMD ["python", "app.py"]

@@ -8,7 +8,7 @@ on:
       - ".hadolint.yaml"
       - ".hadolint.yml"
   push:
-    branches: ["main", develop]
+    branches: ["main", "develop"]
     paths:
       - "**/Dockerfile"
       - "**/Dockerfile.*"

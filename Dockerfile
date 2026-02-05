@@ -3,7 +3,7 @@
 ############################
 # Builder stage
 ############################
-FROM python:3.12-slim AS builder
+FROM 774879361402.dkr.ecr.us-east-1.amazonaws.com/python:3.11.14-slim AS builder
 
 WORKDIR /build
 
@@ -23,7 +23,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 ############################
 # Runtime stage
 ############################
-FROM python:3.12-slim
+FROM 774879361402.dkr.ecr.us-east-1.amazonaws.com/python:3.11.14-slim
 
 # Create a non-root user
 RUN useradd --create-home --shell /usr/sbin/nologin appuser

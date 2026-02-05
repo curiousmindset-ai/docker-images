@@ -6,8 +6,9 @@ on:
   
   push:
     branches: ["main", "develop"]
-
-
+    paths:
+      - "images/Dockerfile"
+      
 jobs:
   hadolint:
     runs-on: ubuntu-latest

@@ -3,18 +3,26 @@ name: hadolint
 on:
   pull_request:
     paths:
-      - "**/Dockerfile*"
+      - "**/Dockerfile"
+      - "**/Dockerfile.*"
+      - ".hadolint.yaml"
+      - ".hadolint.yml"
   push:
     branches: ["main"]
     paths:
-      - "**/Dockerfile*"
+      - "**/Dockerfile"
+      - "**/Dockerfile.*"
+      - ".hadolint.yaml"
+      - ".hadolint.yml"
 
 jobs:
   hadolint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: hadolint/hadolint-action@v3.1.0
+      - name: Run Hadolint
+        uses: hadolint/hadolint-action@v3.1.0
         with:
           failure-threshold: error

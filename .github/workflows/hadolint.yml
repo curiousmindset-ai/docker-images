@@ -2,6 +2,7 @@ name: hadolint
 
 on:
   pull_request:
+    branches: ["develop"]
     paths:
       - "**/Dockerfile"
       - "**/Dockerfile.*"

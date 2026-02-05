@@ -2,18 +2,11 @@ name: hadolint
 
 on:
   pull_request:
-    paths:
-      - "**/Dockerfile"
-      - "**/Dockerfile.*"
-      - ".hadolint.yaml"
-      - ".hadolint.yml"
+    branches: ["main", "develop"]
+  
   push:
     branches: ["main", "develop"]
-    paths:
-      - "**/Dockerfile"
-      - "**/Dockerfile.*"
-      - ".hadolint.yaml"
-      - ".hadolint.yml"
+
 
 jobs:
   hadolint:

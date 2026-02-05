@@ -1,0 +1,4 @@
+failure-threshold: warning
+ignored:
+  - DL3008   # Example: Pin versions in apt-get install (adjust to your standards)
+  - DL4006   # Example: Set pipefail

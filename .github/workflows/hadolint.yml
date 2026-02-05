@@ -7,7 +7,6 @@ on:
   push:
     branches: ["main", "develop"]
     paths:
-      - "images/Dockerfile"
       
 jobs:
   hadolint:
@@ -19,4 +18,5 @@ jobs:
       - name: Run Hadolint
         uses: hadolint/hadolint-action@v3.1.0
         with:
-          failure-threshold: error
+          dockerfile: images/Dockerfile
+          failure-threshold: warning
